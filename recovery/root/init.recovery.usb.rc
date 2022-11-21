@@ -1,0 +1,6 @@
+on boot
+    setprop sys.usb.configfs 1
+    setprop sys.usb.ffs.aio_compat 1
+    
+# for usb otg sdcard hot plug detection
+    write /sys/module/block/parameters/events_dfl_poll_msecs 1000
