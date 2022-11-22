@@ -6,3 +6,6 @@
 #
 
 LOCAL_PATH := device/ulefone/Armor_11_5G
+
+# dynamic partition stuff
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
