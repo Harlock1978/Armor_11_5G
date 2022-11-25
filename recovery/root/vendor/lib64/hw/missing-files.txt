@@ -1,0 +1,7 @@
+Not present in Ulefone Vendor
+
+gatekeeper.e977.so
+gatekeeper.e977_dg_m13_71_q0.so
+gatekeeper.mt****.so
+kmsetkey.mt****.so
+libgatekeeper.so
