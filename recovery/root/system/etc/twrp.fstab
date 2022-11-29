@@ -18,8 +18,8 @@
 /dtbo           emmc    /dev/block/by-name/dtbo          	flags=backup=1;flashimg=1
 /cache		    ext4	/dev/block/by-name/cache            flags=backup=1;wipeingui;wipeduringfactoryreset
 /recovery	    emmc	/dev/block/by-name/recovery         flags=display="Recovery";backup=1;flashimg=1
-/persist        ext4    /dev/block/platform/bootdevice/by-name/persist          flags=display="Persist";backup=1
-/persist_image  emmc    /dev/block/platform/bootdevice/by-name/persist          flags=backup=1;display="Persist Image";flashimg=1
+/persist        ext4    /dev/block/by-name/persist          flags=display="Persist";backup=1
+/persist_image  emmc    /dev/block/by-name/persist          flags=backup=1;display="Persist Image";flashimg=1
 /vbmeta         emmc    /dev/block/by-name/vbmeta       	flags=display="Vbmeta";backup=1;flashimg=1
 /vbmeta_system  emmc    /dev/block/by-name/vbmeta_system	flags=backup=1;display="Vbmeta System";flashimg=1
 /vbmeta_vendor  emmc    /dev/block/by-name/vbmeta_vendor 	flags=backup=1;display="Vbmeta Vendor";flashimg=1
@@ -38,13 +38,13 @@
 /misc 			emmc	/dev/block/by-name/misc				flags=backup=1
 
 #NVM
-/nvcfg		    ext4	/dev/block/platform/bootdevice/by-name/nvcfg            flags=backup=1
-/nvdata		    ext4	/dev/block/platform/bootdevice/by-name/nvdata           flags=backup=1
+/nvcfg		    ext4	/dev/block/by-name/nvcfg            flags=backup=1
+/nvdata		    ext4	/dev/block/by-name/nvdata           flags=backup=1
 /nvram		 	emmc	/dev/block/by-name/nvram           	flags=backup=1;flashimg=1
 
 #Protect
-/protect_f      ext4    /dev/block/platform/bootdevice/by-name/protect1	    	flags=backup=1
-/protect_s	    ext4	/dev/block/platform/bootdevice/by-name/protect2         flags=subpartitionof=/protect_f;backup=1
+/protect_f      ext4    /dev/block/by-name/protect1	    	flags=backup=1
+/protect_s	    ext4	/dev/block/by-name/protect2         flags=subpartitionof=/protect_f;backup=1
 
 #TEE
 /tee1			emmc	/dev/block/by-name/tee1             flags=backup=1;flashimg=1;display="TEE"
