@@ -80,6 +80,20 @@
 /dev/mobicore-user        0666   system     system
 /dev/t-base-tui           0666   system     system
 
+#v4l2 device
+/dev/video*      0660 camera system
+/dev/media*      0660 camera system
+/dev/v4l-subdev* 0660 camera system
+
+#v4l2 codec
+/dev/vcu    0660 camera system
+
+#v4l2 camera
+/dev/mtk_hcp     0660 camera system
+
+# DRM node
+/dev/dri/card0            0660   system     system
+
 # add the read write right of ttyUSB*
 /dev/bus/usb/*     	  0660   root       usb
 /dev/ttyUSB0              0660   radio      radio
