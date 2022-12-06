@@ -17,6 +17,7 @@ Essay to build a TWRP recovery for Ulefone Armor 11 5G with Android 10 with the 
 
 ### Specifications
 
+-------:|:-------------------------
 Network |	Technology 	GSM / CDMA / HSPA / EVDO / LTE / 5G
 Body |	Dimensions 	163.8 x 81.6 x 14.2 mm (6.45 x 3.21 x 0.56 in)
 		Weight  	295 g (10.41 oz)
