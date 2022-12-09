@@ -1,10 +1,11 @@
-# Android device tree for Ulefone Armor 11 5G (Armor_11_5G)
+# Kernel from Harlock1978
+MT6873 - A10
+---------------
+Status: ??
 
-```
-#
-# Copyright (C) 2022 The Android Open Source Project
-# Copyright (C) 2022 SebaUbuntu's TWRP device tree generator
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-```
+recovery-Armor_11_5G-A10-tttttt-tttt.img => Working??
+------------------------------------
+Credit: tester for [Harlock1978 - xda](https://github.com/Harlock1978)
+
+--------------------------------
+
