@@ -9,3 +9,5 @@ Credit: tester for [Harlock1978 - xda](https://github.com/Harlock1978)
 
 --------------------------------
 
+This branch is for testing TWRP-A10 since my compiled 2021 TWRP worked BUT my Linux HD in that time was lost/damaged with all files referring to DT-A10 which were successful in compiling and running TWRP.
+I never put his DT in my github repository so we've been trying since the beginning to create a working DT-A10.
