@@ -37,6 +37,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
+TARGET_SUPPORTS_64_BIT_APPS := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6873
@@ -49,9 +50,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_OTA_ASSERT_DEVICE := Armor_11_5G,Armor 11 5G,Armor_11_5G_EEA
 
 # These are for MTK Chipsets only
-#BOARD_USES_MTK_HARDWARE := true
-#BOARD_HAS_MTK_HARDWARE := true
-#MTK_HARDWARE := true
+BOARD_USES_MTK_HARDWARE := true
+BOARD_HAS_MTK_HARDWARE := true
+MTK_HARDWARE := true
 
 # File systems and partitions
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -72,6 +73,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # Dynamic Partition
+# The real size of Superpartition is different, is this a problem?
 BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9126805504
@@ -200,6 +202,7 @@ TW_EXCLUDE_TWRPAPP := true
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 
 # Storage
+TW_HAS_MTP := true
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
