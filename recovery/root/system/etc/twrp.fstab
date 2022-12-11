@@ -13,9 +13,9 @@
 #/product_image	    emmc	/dev/block/mapper/product_a           flags=backup=1;flashimg=1;logical;display="Product Image"
 
 # Core Partitions
-#/metadata       ext4    /dev/block/by-name/md_udc         	flags=backup=1;display="metadata"
+/metadata       ext4    /dev/block/by-name/md_udc         	flags=backup=1;display="metadata"
 /md_udc		    emmc	/dev/block/by-name/md_udc   		flags=backup=1
-/metadata	    emmc	/dev/block/by-name/metadata 		flags=backup=1;display="metadata"
+#/metadata	    emmc	/dev/block/by-name/metadata 		flags=backup=1;display="metadata"
 
 # Common partition
 /data            ext4    /dev/block/by-name/userdata           flags=fileencryption=aes-256-cts
