@@ -63,8 +63,3 @@ service teed /vendor/bin/teed \
 	disabled
 	seclabel u:r:recovery:s0
     
-service tee_check_keybox /vendor/bin/tee_check_keybox
-	user root
-	group root
-	disabled
-	seclabel u:r:recovery:s0
