@@ -196,6 +196,14 @@ TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := en
 TW_NO_SCREEN_BLANK := true
 TW_NO_BATT_PERCENT := false
+TW_EXCLUDE_TWRPAPP := true
+TW_HAS_DOWNLOAD_MODE := false
+TW_INCLUDE_NTFS_3G := true                    # Include NTFS Filesystem Support
+TW_INCLUDE_FUSE_EXFAT := true                 # Include Fuse-ExFAT Filesystem Support
+TWRP_INCLUDE_LOGCAT := true                   # Include LogCat Binary
+TARGET_USES_LOGD := true
+TW_INCLUDE_FB2PNG := true                     # Include Screenshot Support
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 
 # Excludes
 TW_EXCLUDE_TWRPAPP := true
