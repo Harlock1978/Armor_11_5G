@@ -1,7 +1,8 @@
 # Kernel from Harlock1978
 MT6873 - A10
 ---------------
-Status: ??
+Status: It starts, but cannot mount data.
+Error if trying to mount as rw system and vendor
 
 recovery-Armor_11_5G-A10-tttttt-tttt.img => Working??
 ------------------------------------
