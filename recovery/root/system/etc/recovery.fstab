@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "vendor/mediatek/proprietary/hardware/fstab/mt6873/fstab.in.mt6873" 2
 # 125 "vendor/mediatek/proprietary/hardware/fstab/mt6873/fstab.in.mt6873"
-system /system ext4 ro wait,logical,first_stage_mount
+system /system ext4 ro wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 
 vendor /vendor ext4 ro wait,,avb,logical,first_stage_mount
 
@@ -17,10 +17,9 @@ product /product ext4 ro wait,,avb,logical,first_stage_mount
 
 
 
-#/dev/block/by-name/metadata /metadata ext4 noatime,nosuid,nodev,discard wait,formattable,first_stage_mount
-/dev/block/platform/bootdevice/by-name/md_udc /metadata ext4 noatime,nosuid,nodev,discard wait,formattable,first_stage_mount
+/dev/block/by-name/metadata /metadata ext4 noatime,nosuid,nodev,discard wait,formattable,first_stage_mount
 
-#/dev/block/by-name/userdata /data ext4 noatime,nosuid,nodev,noauto_da_alloc,nodelalloc,nobarrier,data=writeback,errors=panic wait,check,formattable,quota,resize,reservedsize=128m,checkpoint=block,fileencryption=aes-256-xts
+#/dev/block/by-name/userdata /data ext4 noatime,nosuid,nodev,noauto_da_alloc,nodelalloc,nobarrier,data=writeback,errors=panic wait,check,formattable,quota,resize,reservedsize=128m,checkpoint=block,fileencryption=aes-256-xts:aes-256-cts:v1
 /dev/block/by-name/userdata /data ext4 noatime,nosuid,nodev,noauto_da_alloc,errors=panic wait,check,formattable,quota,resize,reservedsize=128m,checkpoint=block,fileencryption=aes-256-xts
 
 /dev/block/by-name/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
