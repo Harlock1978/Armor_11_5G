@@ -28,7 +28,7 @@
 /dev/block/platform/bootdevice/by-name/boot_para 0640    root    system
 
 # OTP
-/dev/otp                  0660   system     system
+/dev/otp						                 0660   system     system
 /dev/block/platform/bootdevice/by-name/otp       0660    root    system
 
 # Connectivity
