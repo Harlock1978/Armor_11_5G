@@ -4,15 +4,15 @@ import /vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 import /vendor/etc/init/android.hardware.keymaster@4.0-service.trustkernel.rc
 import /vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 
-on init
-    export ANDROID_ROOT /system_root
+#on init
+#    export ANDROID_ROOT /system_root
 
     # Create a more standard /dev/block layout for our scripts
     # In mount I don't find /dev/block/platform/bootdevice but only dev/block/by-name should I delete?
-    wait /dev/block/platform/bootdevice	
-    symlink /dev/block/platform/bootdevice /dev/block/bootdevice
-    mkdir /mnt/vendor/persist 0700 root root
-    mount ext4 /dev/block/platform/bootdevice/by-name/persist /mnt/vendor/persist
+#    wait /dev/block/platform/bootdevice	
+#    symlink /dev/block/platform/bootdevice /dev/block/bootdevice
+#    mkdir /mnt/vendor/persist 0700 root root
+#    mount ext4 /dev/block/platform/bootdevice/by-name/persist /mnt/vendor/persist
 
 on boot
     start health-hal-2-0
@@ -30,24 +30,24 @@ service servicemanager /system/bin/servicemanager
     disabled
     seclabel u:r:recovery:s0
 
-#service keystore /system/bin/keystore /tmp/misc/keystore
-#    user root
-#    group root drmrpc readproc
-#    disabled
-#    seclabel u:r:recovery:s0
+service keystore /system/bin/keystore /tmp/misc/keystore
+    user root
+    group root drmrpc readproc
+    disabled
+    seclabel u:r:recovery:s0
     
-#service keystore_auth /system/bin/keystore_auth
-#    oneshot
-#    user root
-#    group root
-#    disabled
-#    seclabel u:r:recovery:s0
+service keystore_auth /system/bin/keystore_auth
+    oneshot
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
     
-#on fs
-#    install_keyring
-#    setprop crypto.ready 1
-#    start hwservicemanager
-#    start servicemanager
+on fs
+    install_keyring
+    setprop crypto.ready 1
+    start hwservicemanager
+    start servicemanager
 
 on init
     setprop sys.usb.configfs 1
@@ -78,25 +78,25 @@ on post-fs
     symlink /dev/block/platform/bootdevice/by-name/preloader_a /dev/block/by-name/preloader_ufs_a
     symlink /dev/block/platform/bootdevice/by-name/preloader_b /dev/block/by-name/preloader_ufs_b
 
-#on property:hwservicemanager.ready=true
-#    start vendor.keymaster-4-0-trustkernel
-#    start vendor.gatekeeper-1-0
+on property:hwservicemanager.ready=true
+    start vendor.keymaster-4-0-trustkernel
+    start vendor.gatekeeper-1-0
     #start keymaster_attestation-1-1
     
-#on property:ro.crypto.state=unsupported
-#    stop teed
-#    stop vendor.keymaster-4-0-trustkernel
-#    stop vendor.gatekeeper-1-0
+on property:ro.crypto.state=unsupported
+    stop teed
+    stop vendor.keymaster-4-0-trustkernel
+    stop vendor.gatekeeper-1-0
     #stop keymaster_attestation-1-1
 
-#on property:ro.crypto.state=unencrypted
-#    stop teed
-#    stop vendor.keymaster-4-0-trustkernel
-#    stop vendor.gatekeeper-1-0
-    #stop keymaster_attestation-1-1
+on property:ro.crypto.state=unencrypted
+    stop teed
+    stop vendor.keymaster-4-0-trustkernel
+    stop vendor.gatekeeper-1-0
+    stop keymaster_attestation-1-1
 
-#on property:twrp.decrypt.done=true
-#    stop teed
-#    stop vendor.keymaster-4-0-trustkernel
-#    stop vendor.gatekeeper-1-0
-    #stop keymaster_attestation-1-1
+on property:twrp.decrypt.done=true
+    stop teed
+    stop vendor.keymaster-4-0-trustkernel
+    stop vendor.gatekeeper-1-0
+    stop keymaster_attestation-1-1
