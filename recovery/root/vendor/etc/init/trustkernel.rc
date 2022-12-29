@@ -7,7 +7,7 @@ on post-fs
 	#restorecon /mnt/vendor/persist/t6
 
 #	restorecon /mnt/vendor/protect_f
-#	mkdir /mnt/vendor/protect_f/tee
+	mkdir /mnt/vendor/protect_f/tee_twrp
 #	chown system system /mnt/vendor/protect_f/tee
 #	restorecon /mnt/vendor/protect_f/tee
 	
