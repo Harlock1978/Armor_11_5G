@@ -58,7 +58,7 @@ service teed /vendor/bin/teed \
     --sptapath /data/vendor/t6/app \
     --systapath /vendor/app/t6 \
     --rpmbdev /dev/rpmb0 \
-    --prot /mnt/vendor/persist/t6 \
+    --prot /mnt/vendor/persist/t6_twrp \
     --logpath /data/vendor/t6/tkcore.log \
     --proprefix vendor.trustkernel
 	capabilities SYS_RAWIO
