@@ -4,8 +4,8 @@ import /vendor/etc/init/trustkernel.rc
 #import /vendor/etc/init/android.hardware.keymaster@4.0-service.trustkernel.rc
 #import /vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 
-#on init
-#    export ANDROID_ROOT /system_root
+on init
+    export ANDROID_ROOT /system_root
 
     # Create a more standard /dev/block layout for our scripts
     # In mount I don't find /dev/block/platform/bootdevice but only dev/block/by-name should I delete?
