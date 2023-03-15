@@ -167,6 +167,6 @@
 /dev/ttyACM0              0660   radio      radio
 
 # trustkernel tee
-/dev/tkcoredrv            0660   root       root
-/dev/block/mmcblk0rpmb    0660   root       root
-/dev/rpmb0                0660   root       root
+/dev/tkcoredrv            0660   root       system
+/dev/block/mmcblk0rpmb    0660   root       system
+/dev/rpmb0                0660   root       system
