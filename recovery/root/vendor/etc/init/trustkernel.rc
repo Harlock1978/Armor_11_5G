@@ -62,7 +62,7 @@ service teed /vendor/bin/teed \
     --logpath /data/vendor/t6/tkcore.log \
     --proprefix vendor.trustkernel
 	capabilities SYS_RAWIO
-	user root
-	group root
+	user system
+	group system
 	disabled
 	seclabel u:r:recovery:s0
